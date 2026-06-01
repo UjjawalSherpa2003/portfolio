@@ -23,7 +23,7 @@ Position me standing naturally within a dense moving crowd of people, as if I am
 
 Apply a dramatic monochrome aesthetic with deep blacks, bright highlights, rich shadows, and extremely high contrast. Use cinematic directional lighting with glow blur aesthetics inspired by Photoshop Gaussian glow effects. Add subtle bloom and glow around highlights, edges, facial contours, shoulders, and lighting reflections to create a dreamy yet powerful atmosphere without overexposing the image.
 
-My facial expression must remain cool with a smirk/smile on my face, cigare in my hand and dominant. Outfit should be dark, elegant, minimal, and modern — preferably an all-black coat or tailored outfit with clean structure and subtle texture. The clothing should blend naturally into the cinematic aesthetic while still separating me visually from the crowd.
+My facial expression must remain cool with a smirk/smile on my face, cigarette in my hand and dominant. Outfit should be dark, elegant, minimal, and modern — preferably an all-black coat or tailored outfit with clean structure and subtle texture. The clothing should blend naturally into the cinematic aesthetic while still separating me visually from the crowd.
 
 Camera composition should be slightly low-angle with medium-distance framing, clearly showing the upper body while preserving environmental depth and the moving crowd around me. Maintain strong depth of field and cinematic perspective. The environment should feel dark, moody, urban, and atmospheric with soft haze, subtle film grain, and realistic lighting falloff.
 
