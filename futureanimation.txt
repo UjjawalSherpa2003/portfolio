@@ -1,0 +1,10 @@
+https://reactbits.dev/animations/glare-hover > over the hero section image 
+https://reactbits.dev/backgrounds/grainient > entire page background with color1=c61313&color2=ffffff&color3=981212
+https://reactbits.dev/animations/gradual-blur > use this over about me section 
+https://reactbits.dev/animations/shape-blur > use this on tools/skills section 
+https://reactbits.dev/animations/star-border > use this on all the contact me buttons or navgation section 
+https://reactbits.dev/text-animations/rotating-text > use this on the section wwhere i am telling about my skills [devops, cloud architect and SRE etc]
+https://reactbits.dev/text-animations/scroll-reveal > use this on the tools section 
+https://reactbits.dev/components/magic-bento > use this in projects section
+https://reactbits.dev/components/pill-nav > for nav bar and contact me button 
+https://reactbits.dev/text-animations/gradient-text > use this to highlight words 

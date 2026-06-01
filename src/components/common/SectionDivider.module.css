@@ -1,0 +1,30 @@
+.dividerWrapper {
+  width: 100%;
+  /* 🔄 CHANGED: Set to 0 to completely remove any spacing footprint between sections */
+  height: 0px; 
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.blossomBranch {
+  position: absolute;
+  top: 0;
+  
+  /* 📐 POSITION: Anchors the trunk strictly to the left as requested */
+  left: 0; 
+  
+  /* 📐 SCALE: Tells the branch to fill the 220px track window perfectly, 
+     stretching its details horizontally across the viewport */
+  width: 100%;
+  height: 100%;
+  
+  /* 'cover' handles responsive scaling beautifully—it ensures the branch stays full 
+     and organically composed on different monitor sizes without warping your pixels */
+  object-fit: cover; 
+  object-position: left center; /* Keeps the focal trunk art pinned to the left wall */
+  
+  pointer-events: none; /* Allows user mouse clicks to pass cleanly through the graphic */
+}

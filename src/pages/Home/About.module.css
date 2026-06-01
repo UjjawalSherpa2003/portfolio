@@ -1,0 +1,83 @@
+.heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 11rem;          /* Bumped up to match the massive look in the screenshot */
+  letter-spacing: 2px;       /* Slightly tighter tracking for that compact display look */
+  line-height: 5.5;          /* Crucial: brought down from 6 so text sits right below it */
+  margin-bottom: -22.5rem;     /* Controls the exact gap between heading and bio */
+  text-align: center;        /* Centers it perfectly on the screen */
+
+  /* Your beautiful gradient text animation rules */
+  background: linear-gradient(90deg, #ffffff, #ff0000, #f1f1f1, #ff0000, #ffffff);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: headingScroll 30s linear infinite;
+}
+
+.bioBlock p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;         /* Slightly smaller to contrast the massive header */
+  line-height: 1.6;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-transform: uppercase; /* Forces uppercase to match the screenshot style */
+  
+  /* Centering the block and the text */
+  max-width: 750px;          /* Tighter max-width forces the text into clean, readable lines */
+  margin: 0 auto 3rem auto;  /* Centers the text block; 3rem controls gap to Contact button */
+  text-align: left;        /* Centers the text lines internally */
+}
+.ctaButton {
+  display: block;              /* Allows auto margins to center the block */
+  margin: 3rem auto 0 auto;    /* Centers the button and pushes it down from the text */
+  background-color: #bd0900;   /* Vibrant, deep red matching your screenshot */
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  
+  padding: 1.2rem 3.5rem;      /* Creates that comfortable, premium padding look */
+  border: none;
+  border-radius: 50px;         /* Gives it the perfect pill-shaped round edges */
+  cursor: pointer;
+  transition: all 0.3s ease;   /* Smooth animation transitions */
+  box-shadow: 0 4px 15px rgba(189, 9, 0, 0.3); /* Soft matching glow */
+}
+
+/* Smooth interactive states */
+.ctaButton:hover {
+  background-color: #e60c00;   /* Brighter red on hover */
+  transform: translateY(-2px); /* Subtle elevate effect */
+  box-shadow: 0 6px 20px rgba(230, 12, 0, 0.5); /* Stronger glow on hover */
+}
+
+.ctaButton:active {
+  transform: translateY(1px);  /* Click feedback effect */
+}
+
+/* Responsive updates */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  .bioBlock p {
+    font-size: 0.9rem;
+    padding: 0 1.5rem; 
+  }
+  .ctaButton {
+    padding: 1rem 2.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes headingScroll {
+  0%   { background-position: 0% center; }
+  100% { background-position: 300% center; }
+}

@@ -1,0 +1,142 @@
+.entryContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+  will-change: opacity;
+}
+
+/* 🖼️ LAYER 1: BASE CROWD BACKDROP */
+.bgImageBase {
+  position: absolute;
+  width: 108%;
+  height: 108%;
+  top: -4%;
+  left: -4%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* 🆕 LAYER 1.5: GIANT SIDE TYPOGRAPHY CONTAINER (Z-INDEX: 2) */
+.titleContainer {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* 🕹️ ADJUST HORIZONTAL PADDING TO BRING WORDS CLOSER OR FARTHER FROM EDGES */
+  padding: 0 4.5rem; 
+  box-sizing: border-box;
+  z-index: 2; /* Sits over crowd backdrop, behind foreground profile cutout */
+  pointer-events: none;
+  
+  /* 🕹️ ADJUST VERTICAL ALIGNMENT (Nudges text up or down into position) */
+  margin-top: -30%; 
+}
+
+/* 🕹️ CONTROLS JUST "UJJAWAL" (LEFT SIDE) */
+.firstName {
+  font-family: 'Lovelo', 'Archivo Black', sans-serif;
+  font-size: clamp(3rem, 11vw, 8rem);
+  font-weight: 800;
+  color: #ffffff;
+
+  /* 🆕 ADD THIS LINE TO NUDGE INDEPENDENTLY: */
+  transform: translateX(-25px) translateY(0px); 
+  /* translateX: negative moves LEFT, positive moves RIGHT */
+  /* translateY: negative moves UP, positive moves DOWN */
+}
+
+/* 🕹️ CONTROLS JUST "SHERPA" (RIGHT SIDE) */
+.lastName {
+  font-family: 'Lovelo', 'Archivo Black', sans-serif;
+  font-size: clamp(3rem, 11vw, 9rem);
+  font-weight: 800;
+  color: #ff0000;
+
+  /* 🆕 ADD THIS LINE TO NUDGE INDEPENDENTLY: */
+  transform: translateX(-30px) translateY(0px);
+  /* translateX: negative moves LEFT, positive moves RIGHT */
+  /* translateY: negative moves UP, positive moves DOWN */
+}
+
+/* 🔲 LAYER 2: INTERACTIVE STRUCTURAL FRAME (Z-INDEX: 2.5) */
+.frameBorder {
+  width: 100%;
+  height: 100%;
+  border: 8px solid rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 2; 
+  pointer-events: none;
+}
+
+/* 🧭 FOOTER NAVIGATION BAR */
+.navBar {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 2.5rem;
+  right: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: auto;
+  z-index: 4; /* Top level link clearance */
+}
+
+.navLeft, .navRight {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+/* 🧭 FOOTER NAVIGATION BAR */
+.navLeft a, .navRight a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.1rem;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, text-shadow 0.2s ease, color 0.2s ease;
+
+  /* 🔴 THE PERMANENT GLOW (Subtle ambient red light behind the text) */
+  /* text-shadow: 0 0 8px rgba(186, 15, 15, 0.6),  */
+               /* 0 0 15px rgba(186, 15, 15, 0.3); */
+}
+
+/* 🔴 THE HOVER INTENSIFICATION GLOW (When you move your mouse over them) */
+.navLeft a:hover, .navRight a:hover {
+  opacity: 1;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.85),
+               0 0 12px rgba(165, 165, 165, 0.4);
+}
+
+.navLeft span {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* 👤 LAYER 3: FOREGROUND PORTRAIT CUTOUT OVERLAY (Z-INDEX: 3) */
+.fgImageCutout {
+  position: absolute;
+  width: 108%;
+  height: 108%;
+  top: -2.80%;
+  left: -4.15%;
+  object-fit: cover;
+  z-index: 3; /* Sits perfectly in front of the white frame AND the giant text labels */
+  pointer-events: none;
+  transform-origin: center bottom;
+  
+  /* 🕹️ Adjust your fine-tuned custom offset position properties here */
+  transform: scale(1.03) translateX(0px) translateY(0px);
+}

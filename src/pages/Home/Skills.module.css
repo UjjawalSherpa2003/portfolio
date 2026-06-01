@@ -1,0 +1,166 @@
+.skillsContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  align-items: center;
+  padding: 80px 5%;
+  box-sizing: border-box;
+  background: transparent;
+  position: relative;
+  cursor: default;
+  overflow: hidden; /* stays here */
+}
+
+.leftPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  z-index: 5;
+}
+
+.sectionTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 6rem;
+  letter-spacing: 4px;
+  line-height: 1;
+  background: linear-gradient(90deg, #ffffff, #ff0000, #ffffff, #ff0000, #ffffff);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: scroll 30s linear infinite;
+}
+
+.infoBox {
+  background: rgba(255,255,255,0.08);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 2rem 2.5rem;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  transition: all 0.4s ease;
+}
+
+.toolName {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #ff4444;
+  letter-spacing: 2px;
+}
+
+.toolInfo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+}
+
+.hint {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.35);
+  font-style: italic;
+}
+
+.rightPanel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orbitWrapper {
+  position: relative;
+  width: 780px;
+  height: 780px;
+  flex-shrink: 0;
+  overflow: visible; /* ← changed from hidden to visible */
+}
+
+.yinYangImg {
+  position: absolute;
+  top: 63%;
+  left: 50%;
+  width: 700px;
+  height: 700px;
+  object-fit: contain;
+  z-index: 2;
+  pointer-events: none;
+  animation: spinYinYang 40s linear infinite;
+}
+
+.profileImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 420px;
+  object-fit: contain;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* TOOL ICONS — replaces toolLabel */
+.toolIcon {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  transition: width 0.25s ease, height 0.25s ease, filter 0.25s ease;
+  z-index: 6;
+}
+
+.toolIconImg {
+  width: 230%;
+  height: 230%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.8));
+}
+
+.toolIcon.active {
+  width: 80px;
+  height: 80px;
+}
+
+.toolIcon.active .toolIconImg {
+  filter: drop-shadow(0 0 20px rgba(255,68,68,0.7));
+}
+
+/* Active tool display in left panel */
+.activeToolHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.activeToolImg {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0%   { background-position: 0% center; }
+  100% { background-position: 300% center; }
+}
+
+@keyframes spinYinYang {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(-360deg); }
+}
+
+@media (max-width: 1200px) {
+  .skillsContainer { grid-template-columns: 1fr; }
+  .orbitWrapper { width: 500px; height: 500px; }
+  .sectionTitle { font-size: 4rem; }
+}
